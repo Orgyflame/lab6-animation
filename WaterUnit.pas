@@ -32,7 +32,7 @@ uses Winapi.Windows;
 
 constructor TWater.Create;
 begin
-  fWaveHeight := 5;
+  fWaveHeight := 15;
   fWavePhase := 0;
   fColor := clBlue;
   fLength := 300;
