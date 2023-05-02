@@ -35,7 +35,7 @@ begin
   fWaveHeight := 15;
   fWavePhase := 0;
   fColor := clBlue;
-  fLength := 300;
+  fLength := 500;
 end;
 
 destructor TWater.Destroy;

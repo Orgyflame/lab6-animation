@@ -36,9 +36,14 @@ end;
 procedure TMainAnimation.draw(canvas: TCanvas; x, y, time: Integer);
 begin
 
-  fSwimmingHuman.draw(canvas, x + 220, y + 103, time);
-  fWaterAnimation.draw(canvas, x + 100, y + 100, time);
-  canvas.Rectangle(100,115,401,135);
+
+  fSwimmingHuman.draw(canvas, x + 200, y + 110, time);
+  fSwimmingHuman.draw(canvas, x + 300, y + 110, time);
+  fSwimmingHuman.draw(canvas, x + 100, y + 110, time);
+  fSwimmingHuman.draw(canvas, x + 400, y + 110, time);
+  fWaterAnimation.draw(canvas, x, y + 100, time);
+  canvas.Rectangle(0,115,500,201);
+
 end;
 
 end.
