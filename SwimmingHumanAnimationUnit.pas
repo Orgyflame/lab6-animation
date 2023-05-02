@@ -1,3 +1,4 @@
+
 unit SwimmingHumanAnimationUnit;
 interface
 uses GraphicsInterfaces, Vcl.Graphics, HumanUnit, ScalerUnit;
@@ -57,3 +58,4 @@ begin
   human.draw(canvas, x, y);
 end;
 end.
+
