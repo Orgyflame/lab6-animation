@@ -32,13 +32,12 @@ implementation
 
 constructor THuman.Create;
 begin
-  fHead := TCircle.Create(10);
-  fBody := TLine.Create(50, Pi);
-  fLeftArm := TTwoLines.Create(50, Pi * 31/18, 7, Pi * 23/18);
-  fRightArm := TTwoLines.Create(50, Pi * 5/18, 7, Pi * 13/18);
-  fLeftLeg := TTwoLines.Create(70, Pi * 19/18, 10, Pi * 13/18);
-  fRightLeg := TTwoLines.Create(70, Pi * 17/18, 10, Pi * 13/18);
-
+  fHead := TCircle.Create(5);
+  fBody := TLine.Create(25, Pi);
+  fLeftArm := TTwoLines.Create(25, Pi * 31/18, 7, Pi * 23/18);
+  fRightArm := TTwoLines.Create(25, Pi * 5/18, 7, Pi * 13/18);
+  fLeftLeg := TTwoLines.Create(35, Pi * 19/18, 10, Pi * 13/18);
+  fRightLeg := TTwoLines.Create(35, Pi * 17/18, 10, Pi * 13/18);
   setAngle(Pi / 2);
 end;
 
