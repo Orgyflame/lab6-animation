@@ -1,5 +1,4 @@
 program lab6;
-
 uses
   Vcl.Forms,
   Unit1 in 'Unit1.pas' {Form1},
@@ -12,11 +11,10 @@ uses
   RectangleUnit in 'RectangleUnit.pas',
   WaterAnimationUnit in 'WaterAnimationUnit.pas',
   MainAnimationUnit in 'MainAnimationUnit.pas',
-  WalkingHumanAnimationUnit in 'WalkingHumanAnimationUnit.pas',
+  SwimmingHumanAnimationUnit in 'SwimmingHumanAnimationUnit.pas',
   ScalerUnit in 'ScalerUnit.pas';
 
 {$R *.res}
-
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;

@@ -3,13 +3,13 @@ unit MainAnimationUnit;
 interface
 
 uses GraphicsInterfaces, Vcl.Graphics, WaterAnimationUnit,
-  WalkingHumanAnimationUnit;
+  SwimmingHumanAnimationUnit;
 
 type
   TMainAnimation = class(TInterfacedObject, IAnimation)
   private
     fWaterAnimation: TWaterAnimation;
-    fWalkingHuman: TWalkingHumanAnimation;
+    fSwimmingHuman: TSwimmingHumanAnimation;
   public
     constructor create();
     destructor destroy(); override;
@@ -23,21 +23,25 @@ implementation
 constructor TMainAnimation.create;
 begin
   fWaterAnimation := TWaterAnimation.create;
-  fWalkingHuman := TWalkingHumanAnimation.create;
+  fSwimmingHuman := TSwimmingHumanAnimation.create;
 end;
 
 destructor TMainAnimation.destroy;
 begin
-  fWalkingHuman.Free;
+  fSwimmingHuman.Free;
   fWaterAnimation.Free;
   inherited;
 end;
 
 procedure TMainAnimation.draw(canvas: TCanvas; x, y, time: Integer);
 begin
-  fWaterAnimation.draw(canvas, x + 50, y + 50, time);
 
-  fWalkingHuman.draw(canvas, x + 150, y + 150, time);
+  fSwimmingHuman.draw(canvas, x + 200, y + 110, time);
+  fSwimmingHuman.draw(canvas, x + 300, y + 110, time);
+  fSwimmingHuman.draw(canvas, x + 100, y + 110, time);
+  fSwimmingHuman.draw(canvas, x + 400, y + 110, time);
+  fWaterAnimation.draw(canvas, x, y + 100, time);
+  canvas.Rectangle(0,115,500,201);
 end;
 
 end.
